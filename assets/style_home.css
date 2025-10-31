@@ -1,0 +1,233 @@
+@font-face {
+    font-family: 'Playfair Display';
+    src: url('./Seasons.otf') format('opentype');
+}
+
+html,
+body,
+[class*="css"],
+.block-container,
+.main,
+.stApp {
+    font-family: 'Seasons', sans-serif !important;
+    background-color: #001F3F !important;
+    color: white !important;
+    font-weight: bold;
+}
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+div {
+    font-weight: bold;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    border-bottom: 5px solid #ccc;
+    background-color: #001F3F;
+}
+
+.logo {
+    font-size: 2.8rem;
+    font-weight: bold;
+}
+
+.neuro {
+    color: #F5C45E;
+}
+
+.vision {
+    color: white;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    border-bottom: none;
+}
+
+.navbar a:hover {
+    color: #E78B48;
+}
+
+/* Styling icons */
+.navbar a i {
+    font-size: 1.6rem;
+    color: white;
+    /* Icon color */
+}
+
+
+.try-now>button {
+    /* Semi‑transparent gradient background for depth */
+    background: linear-gradient(135deg,
+            #F5C45E,
+            #E78B48);
+    /* Frosted‑glass effect */
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+
+    /* Soft, elevated shadow */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+
+    /* Border to define edges */
+    border: 1px solid rgba(255, 255, 255, 0.4);
+
+    /* Text styling */
+    color: black;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+
+    /* Shape & spacing */
+    padding: 0.8rem 2rem;
+    border-radius: 12px;
+    cursor: pointer;
+
+    /* Smooth transitions */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.try-now>button:hover {
+    /* Lift & brighten on hover */
+    transform: translateY(-3px) scale(1.03);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Cards layout */
+.cards-container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 2rem;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: linear-gradient(135deg,
+            rgba(255, 255, 255, 0.1),
+            rgba(255, 255, 255, 0));
+    backdrop-filter: blur(20px);
+    /* strong blur for glass effect */
+    -webkit-backdrop-filter: blur(20px);
+    border-radius: 16px;
+    padding: 1.5rem;
+    width: 30%;
+    text-align: center;
+
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    /* elevated shadow */
+
+    border: 1px solid rgba(255, 255, 255, 0.3);
+
+    color: white;
+    /* ensure text is readable */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+
+.icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    text-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+}
+
+.card-title {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.card-desc {
+    font-size: 1.1rem;
+}
+
+/* Footer styling */
+.footer {
+    text-align: center;
+    padding: 1rem 2rem;
+    font-size: 2.1rem;
+    color: white;
+    background-color: #6A9AB0;
+    margin-top: 3rem;
+    border-top: 1px solid #ddd;
+    background: linear-gradient(135deg,
+            rgba(255, 255, 255, 0.1),
+            rgba(255, 255, 255, 0));
+    backdrop-filter: blur(20px);
+    /* strong blur for glass effect */
+    -webkit-backdrop-filter: blur(20px);
+    border-radius: 16px;
+    padding: 1.5rem;
+    width: 100%;
+    text-align: center;
+
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    /* elevated shadow */
+
+
+
+    color: white;
+    /* ensure text is readable */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.footer a {
+
+    text-decoration: none;
+    color: white;
+    margin: 0 0.5rem;
+    font-size: 1.2rem;
+}
+
+.footer a:hover {
+    color: #E78B48;
+}
+
+.footer i {
+    margin: 0 0.5rem;
+}
+
+/* Increase the size of 'CONNECT WITH US' text */
+.footer p {
+    font-size: 1.3rem;
+    /* increase text size */
+    margin: 0;
+    /* remove default margin for better alignment */
+}
+
+/* Style the icons */
+.footer i {
+    margin: 0 0.5rem;
+    font-size: 2rem;
+    /* increase icon size */
+}
