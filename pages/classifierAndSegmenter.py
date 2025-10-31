@@ -58,6 +58,24 @@ CLASSIFICATION_LABELS = ['glioma', 'meningioma', 'notumor', 'pituitary']
 CLASS_IMAGE_SIZE = 200
 SEGMENTATION_IMAGE_SIZE = 512
 
+import os
+import gdown
+
+# Google Drive links (replace with your actual ones)
+CLASS_MODEL_URL = "https://drive.google.com/uc?id=1uLFGNDJPMnqtEsHX1jA09LgCBjU7xShU"
+SEG_MODEL_URL = "https://drive.google.com/uc?id=1xPRdonZJhBkD0VtChMYrYiFjyr-t8WXL"
+
+# Download models if missing
+if not os.path.exists("brain_tumor_model.h5"):
+    with st.spinner("Downloading classification model..."):
+        gdown.download(CLASS_MODEL_URL, "brain_tumor_model.h5", quiet=False)
+
+if not os.path.exists("tumor_segmentation_model.h5"):
+    with st.spinner("Downloading segmentation model..."):
+        gdown.download(SEG_MODEL_URL, "tumor_segmentation_model.h5", quiet=False)
+
+
+
 # ------------------ Load Models ------------------ #
 @st.cache_resource
 def load_classification_model():
